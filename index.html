@@ -5,10 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD&Parcel</title>
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/icomoon/style.css">
 </head>
 <body>
-    <h1>Hello</h1>
-    
+    <main>
+        <h1 class="main-title">Students registration</h1>
+        <table class="students-table">
+            <thead class="students-table__header">
+                <tr class="students-table__header-tr">
+                    <th class="students-table__header-th">ID</th>
+                    <th class="students-table__header-th">Ім'я</th>
+                    <th class="students-table__header-th">Вік</th>
+                    <th class="students-table__header-th">Курс</th>
+                    <th class="students-table__header-th">Навички</th>
+                    <th class="students-table__header-th">Email</th>
+                    <th class="students-table__header-th">Статус</th>
+                    <th class="students-table__header-th">
+                        <span class="icon-setings" style="width: 20px; height: 20px; display: flex; justify-content: center; align-items: center;"></span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="students-table__body--arr" id="students-table__body"></tbody>
+            <tfoot class="students-table__footer">
+                <tr>
+                    <td colspan="8">
+                        <button class="students-table__download-btn" type="button">
+                            <span class="icon-download" style="width: 20px; height: 20px; display: flex; justify-content: center; align-items: center;"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span></span>
+                            Download
+                        </button>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <h1 class="main-title">Registration</h1>
+        <form class="students-form"  id="students-form">
+            <label for="name" class="students-form__label">
+                Ім'я:
+            </label>
+            <input type="text" id="name" name="name" class="students-form__input" required>
+        
+            <label for="age" class="students-form__label">
+                Вік:
+            </label>
+            <input type="number" id="age" name="age" class="students-form__input" min="16" required>
+        
+            <label for="course" class="students-form__label">
+                Курс:
+            </label>
+            <input type="text" id="course" name="course" class="students-form__input" required>
+        
+            <label for="skills" class="students-form__label">
+                Навички (через кому):
+            </label>
+            <input type="text" id="skills" name="skills" class="students-form__input" required>
+
+            <label for="email" class="students-form__label">
+                Email:
+            </label>
+            <input type="text" id="email" name="email" class="students-form__input" required>
+
+            <div class="students-form__checkbox-group">
+                <label for="recorded" class="students-form__label">
+                    Записаний:
+                </label>
+                <input type="checkbox" id="recorded" name="recorded" class="students-form__checkbox">
+            </div>
+        
+            <button type="submit" class="students-form__button--add">Додати студента</button>
+            <button type="button" class="students-form__button--save">Зберегти</button>
+        </form>
+    </main>
+
+    <template id="students-table__body-template">
+        <tr class="students-table__body-tr">
+            <td class="students-table__body-td">{{id}}</td>
+            <td class="students-table__body-td">{{name}}</td>
+            <td class="students-table__body-td">{{age}}</td>
+            <td class="students-table__body-td">{{course}}</td>
+            <td class="students-table__body-td">{{skills}}</td>
+            <td class="students-table__body-td">{{email}}</td>
+            <td class="students-table__body-td">
+                {{#if recorded}}
+                    Записаний
+                {{else}}
+                    Не записаний
+                {{/if}}
+            </td>
+            <td class="students-table__body-td">
+                <div class="students-table__body-btn-group">
+                    <a href="#students-form">
+                        <button class="students-table__body-btn--edit" id="{{id}}" type="button">
+                            <span class="icon-pen" style="display: flex; justify-content: center; align-items: center;"></span>
+                        </button>
+                    </a>
+                    <button class="students-table__body-btn--delete" id="{{id}}" type="button">
+                        <span class="icon-basket" style="width: 20px; height: 20px; display: flex; justify-content: center; align-items: center;"></span>
+                    </button>
+                </div>
+            </td>
+        </tr>
+    </template>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="./src/index.js"></script>
 </body>
 </html>
