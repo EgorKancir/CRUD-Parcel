@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/icomoon.d03e92eb.eot?uv2t5t');
+  src:  url('/icomoon.d03e92eb.eot?uv2t5t#iefix') format('embedded-opentype'),
+    url('/icomoon.a2a64fdc.ttf?uv2t5t') format('truetype'),
+    url('/icomoon.b6afb0f4.woff?uv2t5t') format('woff'),
+    url('/icomoon.1d1da040.svg?uv2t5t#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-basket {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.icon-basket:before {
+  content: "\e900";
+  font-size: 20px;
+  color: inherit;
+}
+.icon-setings:before {
+  content: "\e901";
+}
+.icon-download .path1:before {
+  content: "\e902";
+  color: rgb(51, 51, 51);
+}
+.icon-download .path2:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-download .path3:before {
+  content: "\e904";
+  margin-left: -1em;
+  color: rgb(214, 214, 214);
+}
+.icon-download .path4:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(175, 175, 175);
+}
+.icon-download .path5:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.icon-download .path6:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(175, 175, 175);
+}
+.icon-download .path7:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.icon-download .path8:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.icon-download .path9:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(11, 164, 224);
+}
+.icon-download .path10:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.icon-number-list:before {
+  content: "\e90c";
+}
+.icon-pen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.icon-pen:before {
+  content: "\e90d";
+  font-size: 20px;
+  color: inherit;
+}
+
+
+/*# sourceMappingURL=/style.de785286.css.map */
